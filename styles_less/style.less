@@ -19,12 +19,14 @@ body {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     p {
-        font-size: 14px;
         line-height: 1.714;
         color: #999999;
         font-family: "Source Sans Pro",sans-serif;
         font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.9px;
         margin: 0;
+        padding: 0 10px;
     }
     h1 {
         color: @main_tex_color;
@@ -68,8 +70,61 @@ body {
     }   
 }
 .container {
-    padding: 0 20px;
+    padding: 150px 20px 0;
 }
+.content-titles{
+    h3 {
+        font-weight: 700;
+        padding-bottom: 25px;
+    }
+    p {
+        
+        padding-bottom: 30px;
+        
+    }
+    .circle-wrapper {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            height: 1px;
+            width: 82px;
+            background: #999999;
+        }
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            height: 1px;
+            width: 82px;
+            background: #999999;
+        }
+    }
+    .fa-circle {
+        font-size: 8px;
+        color: @hovercolor;
+    }
+}
+.fa {
+    font-size: 2em;
+    color: @hovercolor;
+}
+.h4, .h5, .h6, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 
 //----000----------------end of body----------------//
 
@@ -294,10 +349,7 @@ body {
         color: @main_tex_color;
     }
 }   
-.fa {
-    font-size: 2em;
-    color: @hovercolor;
-}
+
 
 .anchor-wrapper {
     display: flex;
@@ -323,7 +375,6 @@ body {
     border-bottom: 1px solid #e6e7eb;
 }
 .priorities {
-    margin-top: 115px;
     transition: all 0.3s;
     h2 {
         margin-top: 30px;
@@ -377,7 +428,6 @@ body {
 
 //-----------------history----------------------------//
 .work-history {
-    margin-top: 140px;
     .monitor {
         display: flex;
         .history-img {
@@ -491,39 +541,7 @@ body {
 //-------------------end of services-------------------------//
 
 //-------------------------Portfolio-------------------------//
-.portfolio-title{
-    h3 {
-        margin-top: 140px;
-        font-weight: 700;
-    }
-    p {
-        font-weight: 400;
-        margin-top: 30px;
-        letter-spacing: 0.9px;
-        position: relative;
-        padding-bottom: 30px;
-        &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 120%;
-            left: 51%;
-            height: 1px;
-            width: 82px;
-            background: #999999;
-        }
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 120%;
-            right: 51%;
-            height: 1px;
-            width: 82px;
-            background: #999999;
-        }
-    }
-}
+
 .down-nav-wrapper{
     display: flex;
     align-items: center;
@@ -565,10 +583,7 @@ body {
         }
     }
 }
-.fa-circle {
-    font-size: 8px;
-    color: @hovercolor;
-}
+
 .portfolio-photo {
     display: flex;
     flex-wrap: wrap;
@@ -642,39 +657,9 @@ body {
 .case-study {
     background: @main_tex_color;
     padding-bottom: 150px;
+    padding-top: 150px;
 }
-.study-title {
-    h3 {
-        padding-top: 150px;
-    }
-    .case-par {
-        font-weight: 400;
-        margin-top: 30px;
-        letter-spacing: 0.9px;
-        position: relative;
-        padding-bottom: 30px;
-        &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 120%;
-            left: 51%;
-            height: 1px;
-            width: 82px;
-            background: #999999;
-        }
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 120%;
-            right: 51%;
-            height: 1px;
-            width: 82px;
-            background: #999999;
-        }  
-    }
-}
+
 .case-study-img {
     position: relative;
     float: right;
@@ -821,42 +806,13 @@ body {
 //---------------our pricing---------------------------//
 
 .our-pricing {
-    padding-top: 160px;
+    padding-top: 150px;
     padding-bottom: 145px;
-    h3 {
-        padding-bottom: 20px;
-    }
-    .price-first-paraph {
-        padding-bottom: 30px;
-        position: relative;
-        &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 120%;
-            left: 51%;
-            height: 1px;
-            width: 82px;
-            background: #999999;
-        }
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 120%;
-            right: 51%;
-            height: 1px;
-            width: 82px;
-            background: #999999;
-        }
-    }
-    .fa {
-        padding-bottom: 70px;
-    }
 }
 .our-pricing-wrapp {
+    padding-top: 70px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     
 }
@@ -866,6 +822,7 @@ body {
     &:hover {
         transition: all 0.3s;
         cursor: pointer;
+        box-shadow: 1px 1px 16px 0px rgba(231,76,60,0.55);
         .price-box-head {
             background: @hovercolor;
             transition: all 0.3s;
@@ -873,6 +830,7 @@ body {
         a {
             background: @hovercolor;
             transition: all 0.3s;
+            box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
         }
         span {
             color: @hovercolor;
@@ -894,6 +852,7 @@ body {
     }
 }
 .price-circle {
+    position: relative;
     margin: 43px auto;
     display: flex;
     justify-content: center;
@@ -903,13 +862,7 @@ body {
     background: #fff;
     border-radius: 50%;
     box-shadow: 0px 0 0 10px rgba(255, 255, 255, 0.25);
-    p {
-        color: #999999;
-        font-family: "Source Sans Pro",sans-serif;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 37px;
-    }
+    
     span {
         font-size: 40px;
         font-weight: 700;
@@ -929,15 +882,11 @@ body {
     }
     a {
         display: block;
-        color: #ffffff;
-        font-family: "Open Sans",sans-serif;
         font-size: 12px;
         font-weight: 600;
-        text-transform: uppercase;
         letter-spacing: 0.14px;
         line-height: 50px;
         width: 148px;
-        box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
         background-color: #999999;
         margin: 50px auto 0;
         border-radius: 3px;
@@ -950,12 +899,14 @@ body {
     background: url(../images/background_team.png) no-repeat top center;
     background-size: cover;
     padding-top: 150px;
+    padding-bottom: 150px;
     h3 {
         color: #fff;
     }
     p {
-        padding: 20px 20px;
+        color: @main_tex_color;
     }
+    
 }
 //-----------------end of team----------------------------//
 //----------------Great-Integrations-with-Others----------//
@@ -964,7 +915,7 @@ body {
     background: @main_tex_color;
     padding-bottom: 130px;
     border-bottom: 1px solid #d8d9db;
-    .fa {
+    .content-titles {
         margin-bottom: 70px;
     }
 }
@@ -989,7 +940,7 @@ body {
 
 //---------------our-blog----------------------------//
 .our-blog {
-    padding-top: 120px;
+    padding-top: 150px;
     background: @main_tex_color;
     
 }
@@ -1111,7 +1062,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 60px;
+    margin-top: 70px;
 }
 .wrapp-left {
     text-align: left;
