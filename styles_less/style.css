@@ -704,9 +704,8 @@ h6 {
 }
 .Check-Out-Stats-content-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 0 20px;
 }
 .Check-Out-Stats-icowrapp {
   border: 1px solid #ffffff;
@@ -723,6 +722,12 @@ h6 {
 .Check-Out-Stats-icowrapp .fa {
   color: #fff;
   font-size: 30px;
+}
+.Check-Out-Stats-content {
+  width: 180px;
+  height: 230px;
+  padding: 5px;
+  margin: 15px 0;
 }
 .Check-Out-Stats-content h5 {
   color: #f4f5f9;
@@ -887,7 +892,7 @@ h6 {
   width: 480px;
   height: 480px;
   text-align: left;
-  padding: 70px 50px;
+  padding: 50px 30px;
   color: #fff;
 }
 .blog-description .descr-art {
@@ -924,7 +929,7 @@ h6 {
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
-  padding-bottom: 50px;
+  padding: 0 0 50px;
   color: #fff;
 }
 .blog-description a {
@@ -975,7 +980,7 @@ h6 {
 }
 .contact-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 70px;
 }
@@ -985,6 +990,7 @@ h6 {
   width: 481px;
   background-color: #fff;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
 }
 .wrapp-left h4 {
   color: #e74c3c;
@@ -1016,10 +1022,11 @@ h6 {
   color: #999999;
 }
 .wrapp-right {
-  padding: 100px;
+  padding: 60px;
   width: 668px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
+  margin-bottom: 15px;
 }
 .form-control {
   margin: 10px 0;
