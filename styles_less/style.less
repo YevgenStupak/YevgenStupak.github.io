@@ -591,7 +591,7 @@ body {
     justify-content: center;
 }
 
-.photo-colum {
+.photo-column {
     display: flex;
     position: relative;
     transition: all 0.5s;
@@ -628,8 +628,8 @@ body {
     p {
         font-size: 14px;
         font-family: 'Open Sans', sans-serif;
-        line-height: 1.2px;
         line-height: 30px;
+        padding: 0;
     }
     h4 {
         margin-top: 70%;
@@ -900,16 +900,56 @@ body {
 
 //----------------------our-team-------------------------//
 .our-team {
-    background: url(../images/background_team.png) no-repeat top center;
-    background-size: cover;
+    background: url(../images/team_img/teambg1.png) no-repeat center top/cover ;
+    min-height: 750px;
     padding-top: 150px;
-    padding-bottom: 150px;
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        background: url(../images/team_img/teambg2.png) no-repeat bottom center;
+    }
     h3 {
         color: #fff;
     }
     p {
         color: @main_tex_color;
     }
+    .content-titles {
+        margin-bottom: 100px;
+    }
+}
+.team-wrapp {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    min-height: 220px;
+}
+.team-column {
+    width: 146px;
+    padding: 10px;
+}
+.team-photo {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: @hovercolor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+.round {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
     
 }
 //-----------------end of team----------------------------//
@@ -931,7 +971,7 @@ body {
         background: @hovercolor;
     }
 }
-.brand-colum {
+.brand-column {
     background: #fff;
     width: 213px;
     height: 103px;
@@ -1156,6 +1196,7 @@ textarea {
     margin-top: 30px;
 }    
 //-----------------end of contacts--------------//
+
 //-----------------promo------------------------//
 .promo {
     background: url(../images/down-background.png) no-repeat top center;
