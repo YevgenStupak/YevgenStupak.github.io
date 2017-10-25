@@ -129,16 +129,16 @@
 .slick-dots li {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 5px;
+    margin: 0 3px;
 }
 .slick-dots li.slick-active button {
     background-color: #e74c3c;
 
 }
 .slick-dots li button {
-    width: 15px;
-    height: 15px;
-    background-color: rgba(18, 18, 17, 0.213);
+    width: 10px;
+    height: 10px;
+    background-color: rgba(18, 18, 17, 0.076);
     border-radius: 50%;
     text-indent: -999px;
     overflow: hidden;
