@@ -15,15 +15,9 @@ $(document).ready(function(){
         
     });
 });
-// menu scroll//
-// $(document).ready(function(){
-//     $("#menu").on("click","a", function (event) {
-//         event.preventDefault();
-//         var id  = $(this).attr('href'),
-//             top = $(id).offset().top;
-//         $('body,html').animate({scrollTop: top}, 1500);
-//     });
-// })
+
+
+
 //menu scroll//
 $(document).ready(function(){
     $("#menu").on("click","a",function(event){
@@ -33,14 +27,8 @@ $(document).ready(function(){
             $('body,html').animate({scrollTop: top},2000);
     });
 });
-// function up() {  
-//     var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);  
-//   if(top > 0) {  
-//     window.scrollBy(0,((top+200)/-10));  
-//     t = setTimeout('up()',50);  
-//   } else clearTimeout(t);  
-//   return false;  
-//   }
+
+
 
 // button back-up//
 (function($) {  
@@ -52,7 +40,9 @@ $(function() {
     });  
     
 });  
-})(jQuery); 
+})(jQuery);
+
+
 // wow effekt//
 newFunction();
 
@@ -60,7 +50,7 @@ function newFunction() {
     var wow = new WOW({
         boxClass: 'wow',
         animateClass: 'animated',
-        offset: 300,
+        offset: 200,
         mobile: false,
         live: true,
         callback: function(box) {
@@ -72,6 +62,8 @@ function newFunction() {
     wow.init();
 }
 newFunction_1();
+
+
 // header-resize//
 function newFunction_1() {
     $(window).scroll(function() {
