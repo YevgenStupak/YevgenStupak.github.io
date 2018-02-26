@@ -3,7 +3,6 @@
 @p-color: #9c9791;
 @title_h2_color: #6a6a6a;
 
-
 //----------------------start-----------------------------------//
 // * {
 //     outline: 1px solid red;
@@ -66,6 +65,8 @@ body {
         }
     }
 }
+
+
 
 .container {
     padding: 0 20px;
@@ -157,13 +158,12 @@ h6 {
     }
 }
 
-
 //----000----------------end of body----------------//
 
 //----------------------header start---------------//
 
 .head {
-    background: url(../images/main_bg/background1.png) no-repeat top center/cover;
+    background: url("../images/main_bg/background1.png") no-repeat top center/cover;
     margin-bottom: 25px;
 }
 
@@ -230,11 +230,11 @@ h6 {
 
 .header-navigation {
     float: right;
-    ul { 
+    ul {
         li {
             float: left;
             margin-left: 10px;
-        }  
+        }
     }
     a {
         color: @main_tex_color;
@@ -256,21 +256,19 @@ h6 {
     display: none;
     padding: 0 15px;
     transition: 0.3s;
-    &:hover { 
+    &:hover {
         .fa {
             color: @hovercolor;
             transition: 0.3s;
         }
-    } 
+    }
     .fa {
         color: @main_tex_color;
         transition: 0.3s;
         font-size: 30px;
         line-height: 43px;
-    }      
+    }
 }
-
-
 
 .title {
     display: flex;
@@ -278,7 +276,7 @@ h6 {
     justify-content: center;
     font-family: 'SourceSansPro', sans-serif;
     font-size: 24px;
-    
+
 }
 .banner-wrapper {
     padding-top: 330px;
@@ -305,7 +303,8 @@ h6 {
             opacity: 1;
             transition: all 0.5s;
             background-color: @hovercolor;
-            .fa-angle-left, .fa-angle-right {
+            .fa-angle-left,
+            .fa-angle-right {
                 transition: all 0.5s;
                 color: #fff;
             }
@@ -314,9 +313,10 @@ h6 {
             outline: none;
         }
     }
-    .fa-angle-left, .fa-angle-right {
+    .fa-angle-left,
+    .fa-angle-right {
         font-size: 33px;
-        color:  #303030;
+        color: #303030;
     }
     .slick-prev {
         margin-right: 42%;
@@ -338,8 +338,7 @@ h6 {
     p {
         max-width: 580px;
         color: @p-color;
-        margin: 0 auto;
-        margin-top: 44px;
+        margin: 44px auto 0;
     }
 }
 
@@ -363,7 +362,7 @@ h6 {
     width: 67px;
     height: 67px;
     margin: 220px auto 0;
-    box-shadow: 0px 0 0 6px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25);
     border-radius: 50%;
     background: #fff;
 
@@ -490,15 +489,15 @@ h6 {
 
 .services {
     background-color: #202020;
-    p,
-    h2 {
+    h2,
+    p {
         padding-right: 80px;
     }
 }
 
 .services-wrapper {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .services-title {
@@ -536,7 +535,7 @@ h6 {
         height: 67px;
         border-radius: 50%;
         background: #fff;
-        box-shadow: 0px 0 0 6px rgba(255, 255, 255, 0.25);
+        box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25);
         z-index: 99;
     }
     h2 {
@@ -547,7 +546,7 @@ h6 {
     }
     p {
         // margin-top: 20px;
-        padding: 20px 80px 20px 0 ;
+        padding: 20px 80px 20px 0;
         font-weight: 400;
         line-height: 26px;
         letter-spacing: 0.9px;
@@ -576,16 +575,23 @@ h6 {
 .portfolio-nav-wrapper {
     margin-top: 70px;
     padding-bottom: 50px;
-    a {
+    button {
         color: #999999;
         line-height: 20px;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 400;
         transition: 0.3s;
+        background-color: transparent;
+        border: none;
         &:hover {
+            cursor: pointer;
             color: @hovercolor;
-            font-weight: 700;
+            font-weight: 400;
             transition: 0.3s;
+        }
+        &:focus {
+            border: none;
+            outline: none;
         }
     }
     ul {
@@ -625,7 +631,6 @@ h6 {
 .photo-column {
     display: flex;
     position: relative;
-    transition: all 0.5s;
     overflow: hidden;
     width: 472px;
     img {
@@ -636,7 +641,7 @@ h6 {
         cursor: pointer;
         .descr {
             opacity: 1;
-            bottom: 0;
+            // bottom: 0;
         }
     }
 }
@@ -644,13 +649,13 @@ h6 {
 .descr {
     opacity: 0;
     position: absolute;
-    bottom: 100%;
+    // bottom: 100%;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(231, 76, 60, .8);
     text-align: left;
-    transition: all 0.5s;
+    transition: all 0.5s ease-in-out;
     h4,
     p {
         color: #fff;
@@ -714,7 +719,7 @@ h6 {
 .case-study-slider-wrapper {
     width: 50%;
     transform: translateX(7%);
-    .slick-dots{
+    .slick-dots {
         position: absolute;
         left: 50%;
         bottom: 35px;
@@ -768,7 +773,7 @@ h6 {
 }
 
 .slide-ico-wrapp {
-    margin: 0px auto;
+    margin: 0 auto;
     width: 88px;
     height: 88px;
     transform: rotate(45deg);
@@ -781,7 +786,7 @@ h6 {
 //-----------------------Check-Out-Stats------------------//
 
 .Check-Out-Stats {
-    background: url(../images/CheckOutStatsBg.png) no-repeat top center;
+    background: url("../images/CheckOutStatsBg.png") no-repeat top center;
     background-size: cover;
     min-height: 510px;
     display: flex;
@@ -804,8 +809,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
     height: 113px;
     width: 113px;
     .fa {
@@ -860,7 +864,7 @@ h6 {
     &:hover {
         transition: all 0.3s;
         cursor: pointer;
-        box-shadow: 1px 1px 16px 0px rgba(231, 76, 60, 0.55);
+        box-shadow: 1px 1px 16px 0 rgba(231, 76, 60, 0.55);
         .price-box-head {
             background: @hovercolor;
             transition: all 0.3s;
@@ -901,7 +905,7 @@ h6 {
     height: 167px;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 0px 0 0 10px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.25);
     span {
         font-size: 40px;
         font-weight: 700;
@@ -938,7 +942,7 @@ h6 {
 //----------------------our-team-------------------------//
 
 .our-team {
-    background: url(../images/team_img/teambg1.png) no-repeat center top/cover;
+    background: url("../images/team_img/teambg1.png") no-repeat center top/cover;
     min-height: 590px;
     padding-top: 140px;
     position: relative;
@@ -949,7 +953,7 @@ h6 {
         height: 100%;
         position: absolute;
         bottom: 0;
-        background: url(../images/team_img/teambg2.png) no-repeat bottom center;
+        background: url("../images/team_img/teambg2.png") no-repeat bottom center;
     }
     h3 {
         color: #fff;
@@ -975,28 +979,28 @@ h6 {
     padding: 10px;
     position: absolute;
     &:nth-child(1) {
-        
+
         top: 15%;
         left: 0;
     }
     &:nth-child(2) {
-        
+
         top: 0;
         left: 20%;
     }
     &:nth-child(3) {
-        
+
         top: 0;
         left: 50%;
         transform: translateX(-50%);
     }
     &:nth-child(4) {
-       
+
         top: 12%;
         right: 20%;
     }
     &:nth-child(5) {
-        
+
         top: 0;
         right: 0;
 
@@ -1253,7 +1257,7 @@ h6 {
     .contact-wrapp-left {
         display: flex;
         justify-content: center;
-        flex-basis: 460px; 
+        flex-basis: 460px;
         height: 560px;
         padding: 10px;
         background-color: #fff;
@@ -1320,14 +1324,14 @@ h6 {
                 text-align: left;
             }
             input {
-                &:focus{
+                &:focus {
                     outline: none;
                     transition: all 0.3s;
                     border-bottom-color: @hovercolor;
                 }
             }
             textarea {
-                &:focus{
+                &:focus {
                     outline: none;
                     transition: all 0.3s;
                     border-bottom-color: @hovercolor;
@@ -1349,7 +1353,7 @@ h6 {
                 font-size: 14px;
                 font-weight: 600;
             }
-    
+
         }
         .form-btn {
             color: #fff;
@@ -1372,6 +1376,50 @@ h6 {
     }
 }
 
+.hidden {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, .5)
+}
+.send-messege {
+    max-width: 640px;
+    height: 200px;
+    margin: 15% auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @hovercolor;
+    border-radius: 3px;
+    position: fixed;
+    z-index: 10000;
+    position: relative;
+    .message-par {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'OpenSans',sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+
+    }
+    .close {
+        position: absolute;
+        top: 3%;
+        right: 2%;
+        font-size: 18px;
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+}
+
 .map-wrapper {
     display: flex;
     padding: 20px 0;
@@ -1382,7 +1430,7 @@ h6 {
 //-----------------promo------------------------//
 
 .promo {
-    background: url(../images/down-background.png) no-repeat top center;
+    background: url("../images/down-background.png") no-repeat top center;
     background-size: cover;
     min-height: 480px;
     display: flex;
@@ -1449,7 +1497,7 @@ h6 {
     .fa-social {
         color: #999999;
         font-size: 15px;
-        transition: 0.3s; 
+        transition: 0.3s;
     }
 }
 
@@ -1464,17 +1512,16 @@ h6 {
         transition: 0.3s;
         &:hover {
             transition: 0.3s;
-            .fa-social{
-            color: @hovercolor;
-            transition: 0.3s;
-            }    
+            .fa-social {
+                color: @hovercolor;
+                transition: 0.3s;
+            }
         }
     }
 }
 
 .copyright {
-    padding: 5px 0;
-    padding-left: 10px;
+    padding: 5px 0 5px 10px;
     span {
         opacity: 0.75;
         color: #999999;
@@ -1503,11 +1550,10 @@ h6 {
     border: 2px solid rgba(0, 0, 0, 0.25);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
     opacity: 0.5;
-    transition: 0.5s;
-    
+    // transition: 0.5s;
     &:hover {
         opacity: 1;
-        transition: 0.5s;
+        transition:all 0.5s ease-in-out;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
     }
 }
@@ -1523,8 +1569,8 @@ h6 {
 
 .clearfix {
     zoom: 1;
-    &:before,
-    &:after {
+    &:after,
+    &:before {
         content: "";
         display: table;
     }
@@ -1535,19 +1581,19 @@ h6 {
 /*------------------------------------------------------------*/
 
 @media screen and (min-width: 1340px) and (max-width: 1890px) {
-	
+
     .photo-column {
         width: 335px;
         height: 335px;
     }
     .blog-img {
         width: 335px;
-        height: 375px;  
+        height: 375px;
     }
     .blog-description {
         width: 295px;
         height: 335px;
-        padding: 20px 20px;
+        padding: 20px;
         h4 {
             font-size: 23px;
             padding-bottom: 20px;
@@ -1561,9 +1607,8 @@ h6 {
     }
 }
 
-
 @media screen and (max-width: 1199px) {
-	.team-column:nth-child(1) {
+    .team-column:nth-child(1) {
         top: 10%;
     }
     .team-column:nth-child(5) {
@@ -1571,10 +1616,9 @@ h6 {
     }
 }
 
-
 @media screen and (max-width: 991px) {
     body {
-        
+
         a {
             font-size: 12px;
             font-weight: 400;
@@ -1585,7 +1629,7 @@ h6 {
         h3 {
             font-size: 30px;
         }
-    } 
+    }
     // header---------------//
     .header {
         padding-top: 15px;
@@ -1604,7 +1648,7 @@ h6 {
 
     .logo-first-letter {
         width: 35px;
-        height: 39px 
+        height: 39px;
     }
 
     .header-navigation a {
@@ -1627,7 +1671,7 @@ h6 {
         p {
             max-width: 450px;
             margin-top: 40px;
-        } 
+        }
     }
 
     .button-block {
@@ -1683,7 +1727,7 @@ h6 {
     .our-history {
         width: 95%;
         margin: 0 auto;
-        padding: 0px;
+        padding: 0;
     }
 
     //-----------------//
@@ -1698,13 +1742,12 @@ h6 {
 
     .services-title {
         p {
-            padding: 0;
-            padding-right: 80px;
+            padding: 0 80px 0 0;
             width: 100%;
         }
         h2 {
             margin-top: 40px;
-        }    
+        }
         h3:after {
             height: 27px;
             width: 5px;
@@ -1718,7 +1761,7 @@ h6 {
     //Check-Out-Stats--//
     .Check-Out-Stats {
         min-height: 380px;
-    } 
+    }
 
     .Check-Out-Stats-icowrapp {
         margin-bottom: 30px;
@@ -1728,7 +1771,7 @@ h6 {
             font-size: 25px;
         }
     }
-    
+
     .Check-Out-Stats-column {
         width: 130px;
         height: 200px;
@@ -1775,7 +1818,7 @@ h6 {
             }
         }
     }
-            
+
     // portfolio------//
     .portfolio {
         padding-top: 80px;
@@ -1806,8 +1849,8 @@ h6 {
     }
 
     .case-study-wrapper {
-        background: url(../images/monitor2.png) no-repeat top center / cover;
-        min-height:750px;
+        background: url("../images/monitor2.png") no-repeat top center / cover;
+        min-height: 750px;
         border-radius: 10px;
     }
 
@@ -1818,7 +1861,7 @@ h6 {
 
     .slick-dots li button {
         background-color: rgba(246, 246, 241, 0.37);
-    } 
+    }
 
     // ----------------//
     // our pricing-----//
@@ -1879,7 +1922,7 @@ h6 {
         p {
             font-size: 12px;
             line-height: 25px;
-            padding: 0 0 30px; 
+            padding: 0 0 30px;
         }
     }
 
@@ -1910,7 +1953,6 @@ h6 {
         }
     }
 }
-
 
 @media screen and (max-width: 768px) {
     body {
@@ -1946,7 +1988,7 @@ h6 {
     .header {
         background-color: rgba(32, 32, 32, 0.9);
         padding-top: 0;
-       
+
     }
 
     .logo {
@@ -1958,11 +2000,11 @@ h6 {
     .logo-first-letter {
         width: 24px;
         height: 25px;
-    } 
+    }
 
     .main-menu {
         display: none;
-        
+
     }
 
     #touch-menu {
@@ -1980,15 +2022,15 @@ h6 {
         top: 100%;
         left: 0;
         right: 0;
-        ul { 
+        ul {
             li {
                 float: none;
                 margin-left: 0;
                 a {
                     background: rgba(32, 32, 32, 0.9);
-                    border-bottom: 1px solid rgba(33, 32, 32, 0.9);    
-               }
-            }  
+                    border-bottom: 1px solid rgba(33, 32, 32, 0.9);
+                }
+            }
         }
     }
 
@@ -2002,7 +2044,7 @@ h6 {
         }
         h1 {
             font-size: 28px;
-            padding: 14px 0px;
+            padding: 14px 0;
         }
         p {
             max-width: 330px;
@@ -2035,8 +2077,8 @@ h6 {
         width: 45px;
         height: 45px;
         margin: 50px auto 0;
-        box-shadow: 0px 0 0 4px rgba(255, 255, 255, 0.25);
-        
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
+
     }
     // ---------------//
     // priorities----------//
@@ -2045,8 +2087,8 @@ h6 {
     }
 
     .priorities {
-            width: 270px;
-            margin-bottom: 15px;
+        width: 270px;
+        margin-bottom: 15px;
         h2 {
             font-size: 16px;
             margin-top: 20px;
@@ -2064,7 +2106,7 @@ h6 {
 
     // ---------------------//
     // History--------------//
-    .our-history{ 
+    .our-history {
         p {
             margin-top: 35px;
             line-height: 20px;
@@ -2083,7 +2125,7 @@ h6 {
         span {
             width: 40px;
             height: 40px;
-            box-shadow: 0px 0 0 4px rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
         }
         h3 {
             padding-right: 70px;
@@ -2092,7 +2134,8 @@ h6 {
             height: 23px;
             right: 50px;
         }
-        p, h2 {
+        h2,
+        p {
             padding-right: 50px;
         }
     }
@@ -2121,7 +2164,7 @@ h6 {
     // Case study-----------//
     .case-study-slider-wrapper {
         width: 90%;
-        .case-study-slide { 
+        .case-study-slide {
             height: 460px;
             .fa {
                 line-height: 50px;
@@ -2167,7 +2210,7 @@ h6 {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 300px;            
+            width: 300px;
             .team-photo {
                 flex-shrink: 0;
                 margin: 0;
@@ -2175,26 +2218,26 @@ h6 {
         }
         .team-name {
             position: relative;
-            p:before{
+            p:before {
                 width: 75px;
                 height: 2px;
                 position: absolute;
                 top: 58%;
                 right: 96%;
             }
-        }   
+        }
     }
 
-    .our-team { 
+    .our-team {
         .content-titles {
             margin-bottom: 30px;
         }
     }
 
-} 
+}
 
 @media screen and (max-width: 679px) {
-    .blog-descr-top:before { 
+    .blog-descr-top:before {
         display: inline-block;
         width: 0;
         height: 0;
@@ -2204,7 +2247,7 @@ h6 {
         left: 50%;
         border-style: solid;
         border-width: 0 23px 20px 23px;
-        border-color: transparent transparent @hovercolor transparent; 
+        border-color: transparent transparent @hovercolor transparent;
     }
     .blog-descr-down:after {
         display: inline-block;
@@ -2219,7 +2262,6 @@ h6 {
         border-color: @hovercolor transparent transparent transparent;
     }
 }
-
 
 @media screen and (max-width: 480px) {
     .banner-slider-button {
@@ -2241,7 +2283,8 @@ h6 {
                 right: 0;
             }
         }
-        h2, p {
+        h2,
+        p {
             padding: 0;
         }
         h2 {
@@ -2259,14 +2302,14 @@ h6 {
     .case-study {
         display: none;
     }
-    .team-wrapp { 
+    .team-wrapp {
         .team-column {
             width: 280px;
         }
         .team-name {
             opacity: 1;
             p {
-                font-size: 20px; 
+                font-size: 20px;
                 letter-spacing: 1.4px;
                 &:before {
                     width: 170px;
@@ -2275,7 +2318,7 @@ h6 {
                     right: 23%;
                 }
             }
-        }        
+        }
     }
     .contact-row {
         .form {
@@ -2292,7 +2335,7 @@ h6 {
             }
         }
     }
-    .promo-wrapper { 
+    .promo-wrapper {
         p {
             font-size: 10px;
             padding: 10px 0;
@@ -2302,17 +2345,14 @@ h6 {
         }
     }
     #back-top {
-        bottom: 13%;
-        width: 30px;
-        height: 30px;
+        bottom: 1%;
+        width: 25px;
+        height: 25px;
     }
 }
 @media screen and (max-width: 320px) {
-    
-}
+    }
 @media screen and (min-width: 767px) and (max-width: 991px) {
-    
-}
+    }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-    
-}
+    }
